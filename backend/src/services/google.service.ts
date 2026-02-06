@@ -24,6 +24,6 @@ export async function fetchGoogleParams(symbol:string) {
     const peRatio =  $("div[data-attrid='PE_RATIO']").first().text() || null;
     const earnings = $("div[data-attrid='EARNINGS']").first().text() || null; 
 
-    const result = {peRatio, latestEarnings:earnings};
+    const result = {peRatio, earnings:earnings};
     return result;
 }

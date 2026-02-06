@@ -3,7 +3,7 @@ import YahooFinance from "yahoo-finance2";
 
 const yf = new YahooFinance({ suppressNotices: ['yahooSurvey'] });
 
-export async function fetchCMP(symbol: string): Promise<number | null> {
+export async function fetchCMP(symbol: string): Promise<number> {
     const cKey = `YF_${symbol}`;
     const cachedContent = cache.get<number>(cKey);
     if(cachedContent !== undefined) return cachedContent;
@@ -22,5 +22,5 @@ export async function fetchCMP(symbol: string): Promise<number | null> {
         }
     }
 
-    return null;
+    return 0;
 }
