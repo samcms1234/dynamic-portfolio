@@ -90,6 +90,16 @@ GET /api/portfolio
 
 ---
 
+## Environment Variables
+
+Create a `.env` file inside the `frontend` directory:
+
+```env
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/portfolio
+```
+
+---
+
 ### Start the Frontend
 
 ```bash
