@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
+import { cache } from '../cache/cacheHandler';
 
 export async function fetchGoogleParams(symbol:string) {
 

@@ -12,7 +12,7 @@ interface Stock {
 interface StockComputed extends Stock {
     cmp: number;
     peRatio: string | null;
-    latestEarning: string | null;
+    latestEarning: number | null;
     investment: number;
     presentValue: number;
     gainLoss: number;
