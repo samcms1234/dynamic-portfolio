@@ -47,7 +47,7 @@ export default function PortfolioTable({ sectors }: Props) {
                 <td>{stock.investment}</td>
                 <td>{stock.portfolioPercentage.toFixed(2)}%</td>
                 <td>{stock.exchange}</td>
-                <td>{stock.cmp}</td>
+                <td>{stock.cmp.toFixed(2)}</td>
                 <td>{stock.presentValue.toFixed(2)}</td>
                 <td
                   className={
