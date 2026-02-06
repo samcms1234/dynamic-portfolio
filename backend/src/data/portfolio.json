@@ -1,0 +1,311 @@
+[
+  {
+    "sectorName": "Banking",
+    "stocksList": [
+      {
+        "name": "HDFC Bank",
+        "exchange": "HDFCBANK",
+        "purchasePrice": 1490,
+        "quantity": 50,
+        "cmp": 0,
+        "peRatio": "18.5",
+        "latestEarning": "69181",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "ICICI Bank",
+        "exchange": "ICICIBANK",
+        "purchasePrice": 1100,
+        "quantity": 40,
+        "cmp": 0,
+        "peRatio": "16.2",
+        "latestEarning": "47368",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "State Bank of India",
+        "exchange": "SBIN",
+        "purchasePrice": 750,
+        "quantity": 60,
+        "cmp": 0,
+        "peRatio": "12.8",
+        "latestEarning": "61077",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "NBFC",
+    "stocksList": [
+      {
+        "name": "Bajaj Finance",
+        "exchange": "BAJFINANCE",
+        "purchasePrice": 6466,
+        "quantity": 15,
+        "cmp": 0,
+        "peRatio": "28.4",
+        "latestEarning": "15375",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "IT Services",
+    "stocksList": [
+      {
+        "name": "Tata Consultancy Services",
+        "exchange": "TCS",
+        "purchasePrice": 3800,
+        "quantity": 25,
+        "cmp": 0,
+        "peRatio": "23.1",
+        "latestEarning": "42867",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "Infosys",
+        "exchange": "INFY",
+        "purchasePrice": 1650,
+        "quantity": 35,
+        "cmp": 0,
+        "peRatio": "23.2",
+        "latestEarning": "24095",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "Wipro",
+        "exchange": "WIPRO",
+        "purchasePrice": 450,
+        "quantity": 80,
+        "cmp": 0,
+        "peRatio": "19.8",
+        "latestEarning": "12543",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "FMCG",
+    "stocksList": [
+      {
+        "name": "Hindustan Unilever",
+        "exchange": "HINDUNILVR",
+        "purchasePrice": 2400,
+        "quantity": 20,
+        "cmp": 0,
+        "peRatio": "58.2",
+        "latestEarning": "9196",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "ITC",
+        "exchange": "ITC",
+        "purchasePrice": 420,
+        "quantity": 100,
+        "cmp": 0,
+        "peRatio": "28.5",
+        "latestEarning": "18063",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Oil & Gas",
+    "stocksList": [
+      {
+        "name": "Reliance Industries",
+        "exchange": "RELIANCE",
+        "purchasePrice": 2650,
+        "quantity": 18,
+        "cmp": 0,
+        "peRatio": "22.1",
+        "latestEarning": "79410",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      },
+      {
+        "name": "ONGC",
+        "exchange": "ONGC",
+        "purchasePrice": 220,
+        "quantity": 150,
+        "cmp": 0,
+        "peRatio": "7.8",
+        "latestEarning": "56262",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Power",
+    "stocksList": [
+      {
+        "name": "NTPC",
+        "exchange": "NTPC",
+        "purchasePrice": 350,
+        "quantity": 80,
+        "cmp": 0,
+        "peRatio": "13.6",
+        "latestEarning": "18814",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Telecom",
+    "stocksList": [
+      {
+        "name": "Bharti Airtel",
+        "exchange": "BHARTIARTL",
+        "purchasePrice": 1200,
+        "quantity": 25,
+        "cmp": 0,
+        "peRatio": "45.2",
+        "latestEarning": "7445",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Automotive",
+    "stocksList": [
+      {
+        "name": "Tata Motors",
+        "exchange": "TATAMOTORS",
+        "purchasePrice": 950,
+        "quantity": 45,
+        "cmp": 0,
+        "peRatio": "8.9",
+        "latestEarning": "31063",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Metals",
+    "stocksList": [
+      {
+        "name": "Tata Steel",
+        "exchange": "TATASTEEL",
+        "purchasePrice": 140,
+        "quantity": 200,
+        "cmp": 0,
+        "peRatio": "15.2",
+        "latestEarning": "7749",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Cement",
+    "stocksList": [
+      {
+        "name": "UltraTech Cement",
+        "exchange": "ULTRACEMCO",
+        "purchasePrice": 9500,
+        "quantity": 3,
+        "cmp": 0,
+        "peRatio": "56.9",
+        "latestEarning": "7154",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  },
+  {
+    "sectorName": "Retail",
+    "stocksList": [
+      {
+        "name": "Avenue Supermarts (DMart)",
+        "exchange": "DMART",
+        "purchasePrice": 4200,
+        "quantity": 12,
+        "cmp": 0,
+        "peRatio": "113.3",
+        "latestEarning": "2475",
+        "investment": 0,
+        "presentValue": 0,
+        "gainLoss": 0,
+        "portfolioPercentage": 0
+      }
+    ],
+    "totalInvestment": 0,
+    "totalPresentValue": 0,
+    "totalGainLoss": 0
+  }
+]
