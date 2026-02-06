@@ -3,8 +3,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const CACHE_TTL = 24 * 60 * 60;
+
 const cache = new NodeCache({
-    stdTTL: Number(process.env.CACHE_TTL) || 15
+    stdTTL: Number(CACHE_TTL)
 });
 
 export { cache };

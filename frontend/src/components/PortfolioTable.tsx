@@ -1,69 +1,116 @@
+"use client";
+
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  getSortedRowModel,
+  useReactTable
+} from "@tanstack/react-table";
 import { Sector } from "../types/portfolio";
-import SectorHeader from "./SectorHeader";
+import { useMemo } from "react";
 
-interface Props {
+export default function PortfolioTable({
+  sectors
+}: {
   sectors: Sector[];
-}
+}) {
+  const data = useMemo(
+    () =>
+      sectors.flatMap((sector) =>
+        sector.stocksList.map((s) => ({
+          ...s,
+          sectorName: sector.sectorName
+        }))
+      ),
+    [sectors]
+  );
 
-export default function PortfolioTable({ sectors }: Props) {
+  const columns = useMemo<ColumnDef<any>[]>(
+    () => [
+      { accessorKey: "sectorName", header: "Sector" },
+      { accessorKey: "name", header: "Stock" },
+      { accessorKey: "purchasePrice", header: "Buy Price" },
+      { accessorKey: "quantity", header: "Qty" },
+      { accessorKey: "investment", header: "Investment" },
+      {
+        accessorKey: "portfolioPercentage",
+        header: "Portfolio %",
+        cell: (i) => `${i.getValue<number>().toFixed(2)}%`
+      },
+      { accessorKey: "exchange", header: "Exchange" },
+      { accessorKey: "cmp", header: "CMP" },
+      { accessorKey: "presentValue", header: "Present Value" },
+      {
+        accessorKey: "gainLoss",
+        header: "P/L",
+        cell: (i) => (
+          <span
+            className={
+              i.getValue<number>() >= 0
+                ? "text-green-600"
+                : "text-red-600"
+            }
+          >
+            {i.getValue<number>().toFixed(2)}
+          </span>
+        )
+      },
+      {
+        accessorKey: "peRatio",
+        header: "P/E",
+        cell: (i) => i.getValue<number>() ?? "—"
+      }
+    ],
+    []
+  );
+
+  const table = useReactTable({
+    data,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel()
+  });
+
   return (
-    <table className="min-w-full bg-white shadow rounded">
-      <thead className="bg-gray-800 text-white">
-        <tr>
-          <th className="px-3 py-2">Stock</th>
-          <th>Buy Price</th>
-          <th>Qty</th>
-          <th>Investment</th>
-          <th>Portfolio %</th>
-          <th>Exchange</th>
-          <th>CMP</th>
-          <th>Present Value</th>
-          <th>P/L</th>
-          <th>P/E</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {sectors.map((sector) => (
-          <>
-            <SectorHeader
-              key={sector.sectorName}
-              name={sector.sectorName}
-              investment={sector.totalInvestment}
-              presentValue={sector.totalPresentValue}
-              gainLoss={sector.totalGainLoss}
-            />
-
-            {sector.stocksList.map((stock) => (
-              <tr
-                key={stock.name}
-                className="border-t text-center"
-              >
-                <td className="px-2 py-1 text-left">
-                  {stock.name}
-                </td>
-                <td>{stock.purchasePrice.toFixed(2)}</td>
-                <td>{stock.quantity}</td>
-                <td>{stock.investment}</td>
-                <td>{stock.portfolioPercentage.toFixed(2)}%</td>
-                <td>{stock.exchange}</td>
-                <td>{stock.cmp.toFixed(2)}</td>
-                <td>{stock.presentValue.toFixed(2)}</td>
-                <td
-                  className={
-                    stock.gainLoss >= 0
-                      ? "text-green-600"
-                      : "text-red-600"
-                  }
+    <div className="overflow-x-auto bg-white shadow rounded">
+      <table className="min-w-full text-sm">
+        <thead className="bg-gray-800 text-white">
+          {table.getHeaderGroups().map((hg) => (
+            <tr key={hg.id}>
+              {hg.headers.map((header) => (
+                <th
+                  key={header.id}
+                  className="px-3 py-2 cursor-pointer"
+                  onClick={header.column.getToggleSortingHandler()}
                 >
-                  {stock.gainLoss.toFixed(2)}
+                  {flexRender(
+                    header.column.columnDef.header,
+                    header.getContext()
+                  )}
+                  {header.column.getIsSorted() === "asc" && " ▲"}
+                  {header.column.getIsSorted() === "desc" && " ▼"}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+
+        <tbody>
+          {table.getRowModel().rows.map((row) => (
+            <tr key={row.id} className="border-t text-center">
+              {row.getVisibleCells().map((cell) => (
+                <td key={cell.id} className="px-3 py-2">
+                  {flexRender(
+                    cell.column.columnDef.cell,
+                    cell.getContext()
+                  )}
                 </td>
-                <td>{stock.peRatio ?? "—"}</td>
-              </tr>
-            ))}
-          </>
-        ))}
-      </tbody>
-    </table>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
