@@ -39,8 +39,8 @@ export default function PortfolioTable({
         cell: (i) => `${i.getValue<number>().toFixed(2)}%`
       },
       { accessorKey: "exchange", header: "Exchange" },
-      { accessorKey: "cmp", header: "CMP" },
-      { accessorKey: "presentValue", header: "Present Value" },
+      { accessorKey: "cmp", header: "CMP", cell: (info) => `₹${info.getValue<number>().toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2})}` },
+      { accessorKey: "presentValue", header: "Present Value", cell: (info) => info.getValue<number>().toFixed(2) },
       {
         accessorKey: "gainLoss",
         header: "P/L",
